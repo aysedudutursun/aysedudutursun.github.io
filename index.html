@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayşe Dudu Tursun</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#070a14;--ink:#e8f1ff;--mut:#8ea0c0;--card:#0d1426;--c:#00f0ff;--m:#ff2bd6;--l:#b6ff3c}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef2fb;--ink:#0b1226;--mut:#4a5a7a;--card:#fff;--c:#008fa0;--m:#c2009f;--l:#3f8f00}}
+:root[data-theme="light"]{--bg:#eef2fb;--ink:#0b1226;--mut:#4a5a7a;--card:#fff;--c:#008fa0;--m:#c2009f;--l:#3f8f00}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 124px);height:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Trebuchet MS","Segoe UI",system-ui,sans-serif;overflow-x:hidden}
+#cv{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.55}
+main,nav,footer{position:relative;z-index:1}
+a{color:inherit}.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in srgb,var(--c) 40%,transparent)}
+nav .wrap{display:flex;gap:16px;align-items:center;height:52px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav b{color:var(--c);text-shadow:0 0 10px var(--c);margin-right:auto}
+nav a{text-decoration:none;font-size:14px;color:var(--mut)}nav a:hover{color:var(--c)}
+.lg{display:flex;gap:4px}.lg button{font:inherit;font-size:12px;font-weight:700;background:none;color:var(--mut);border:1px solid var(--mut);border-radius:8px;padding:2px 7px;cursor:pointer}
+.lg button[aria-pressed=true]{color:var(--bg);background:var(--c);border-color:var(--c);box-shadow:0 0 12px var(--c)}
+.hero{min-height:100svh;display:flex;align-items:center;padding:90px 0 50px}
+.hero h1{font-size:clamp(44px,10vw,108px);line-height:.95;margin:0;letter-spacing:-.02em;color:#fff;text-shadow:0 0 6px var(--c),0 0 24px var(--c),0 0 60px var(--m);animation:fl 5s infinite}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .hero h1{color:var(--ink)}}
+:root[data-theme="light"] .hero h1{color:var(--ink)}
+@keyframes fl{0%,92%,96%,100%{opacity:1}94%{opacity:.6}98%{opacity:.8}}
+.role{font-size:clamp(18px,3vw,26px);margin:24px 0 6px;color:var(--l);text-shadow:0 0 12px var(--l);min-height:1.6em}
+.role em{font-style:normal;border-right:3px solid var(--l);animation:bl 1s step-end infinite}@keyframes bl{50%{border-color:transparent}}
+.sub{max-width:54ch;color:var(--mut)}
+.bars{display:flex;align-items:flex-end;gap:6px;height:90px;margin:26px 0}
+.bars i{flex:0 0 14px;border-radius:4px 4px 0 0;background:linear-gradient(var(--c),var(--m));box-shadow:0 0 12px var(--c);height:20%;animation:bar 2.4s ease-in-out infinite alternate}
+@keyframes bar{to{height:var(--h)}}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:11px 22px;border-radius:999px;text-decoration:none;font-weight:700;color:var(--c);border:2px solid var(--c);box-shadow:0 0 14px color-mix(in srgb,var(--c) 60%,transparent),inset 0 0 12px color-mix(in srgb,var(--c) 30%,transparent);transition:.2s}
+.btn:hover{background:var(--c);color:var(--bg);box-shadow:0 0 30px var(--c)}
+.btn.m{color:var(--m);border-color:var(--m);box-shadow:0 0 14px color-mix(in srgb,var(--m) 60%,transparent)}.btn.m:hover{background:var(--m);color:var(--bg);box-shadow:0 0 30px var(--m)}
+.sb{position:sticky;top:calc(env(safe-area-inset-top,0px) + 58px);z-index:9;padding:10px 0}
+.sb .wrap{display:flex;gap:10px;align-items:center}
+.sb input{flex:1;min-width:0;font:inherit;padding:12px 18px;border-radius:999px;background:var(--card);color:var(--ink);border:2px solid var(--m);box-shadow:0 0 16px color-mix(in srgb,var(--m) 50%,transparent);outline:none}
+.sb input:focus{border-color:var(--c);box-shadow:0 0 22px var(--c)}
+#cnt{font-size:14px;color:var(--l);white-space:nowrap}
+section{padding:70px 0}
+h2{font-size:clamp(28px,5vw,46px);margin:0 0 30px;color:var(--c);text-shadow:0 0 14px color-mix(in srgb,var(--c) 70%,transparent)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid color-mix(in srgb,var(--c) 35%,transparent);border-radius:18px;padding:22px;transition:transform .3s,box-shadow .3s,opacity .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--c);box-shadow:0 0 26px color-mix(in srgb,var(--c) 45%,transparent)}
+.card h3{margin:0 0 6px;font-size:19px}.card p{margin:0;color:var(--mut);font-size:15px}
+.tag{display:inline-block;margin:10px 6px 0 0;padding:2px 11px;border-radius:999px;font-size:13px;color:var(--l);border:1px solid var(--l)}
+.dim{opacity:.12}.hit{border-color:var(--m)!important;box-shadow:0 0 30px var(--m)!important}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:26px}
+.stats div{border:1px solid var(--m);border-radius:16px;padding:16px;box-shadow:0 0 14px color-mix(in srgb,var(--m) 35%,transparent)}
+.stats b{display:block;font-size:42px;line-height:1;color:var(--m);text-shadow:0 0 14px var(--m)}
+.tl{border-left:2px solid var(--c);margin-left:8px;padding-left:24px;display:grid;gap:22px;box-shadow:-6px 0 14px -8px var(--c)}
+.tl>div{position:relative}.tl>div::before{content:"";position:absolute;left:-32px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 12px var(--c)}
+.tl small{color:var(--mut)}.tl h3{margin:0}.tl p{margin:4px 0 0;color:var(--mut)}
+.ic{font-size:40px;display:inline-block;animation:fw 2s ease-in-out infinite}@keyframes fw{50%{transform:translateY(-8px)}}
+.av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:var(--m);border:2px solid var(--m);box-shadow:0 0 16px var(--m);margin-bottom:12px}
+.ct{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.ct a{display:block;padding:18px;border-radius:16px;border:2px solid var(--c);text-decoration:none;font-weight:700;overflow-wrap:anywhere;transition:.2s}
+.ct a small{display:block;font-weight:400;color:var(--mut)}.ct a:hover{box-shadow:0 0 26px var(--c);transform:translateY(-4px)}
+.lk{display:inline-block;margin:10px 8px 0 0;padding:4px 14px;border:1px solid var(--c);border-radius:999px;color:var(--c);text-decoration:none;font-size:14px;font-weight:700;transition:.2s}.lk:hover{background:var(--c);color:var(--bg);box-shadow:0 0 16px var(--c)}
+footer{padding:34px 0;text-align:center;color:var(--mut);font-size:14px}
+:focus-visible{outline:3px solid var(--l);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="cv" aria-hidden="true"></canvas>
+<nav><div class="wrap"><b>ADT</b>
+<a href="#hk" data-i="n1"></a><a href="#yt" data-i="n2"></a><a href="#pr" data-i="n3"></a><a href="#dn" data-i="n4"></a><a href="#tp" data-i="n5"></a><a href="#ys" data-i="n8"></a><a href="#rf" data-i="n6"></a><a href="#ic" data-i="n7"></a>
+<div class="lg" role="group" aria-label="Language"><button data-l="0">TR</button><button data-l="1">EN</button><button data-l="2">ES</button><button data-l="3">DE</button></div></div></nav>
+<main>
+<header class="hero"><div class="wrap"><h1>Ayşe Dudu<br>Tursun</h1><p class="role"><em id="ty"></em></p><p class="sub" data-i="sub"></p>
+<div class="bars" id="bars" aria-hidden="true"></div>
+<div class="btns"><a class="btn" href="#pr" data-i="b1"></a><a class="btn m" href="#ic" data-i="b2"></a></div></div></header>
+
+<div class="sb"><div class="wrap"><input id="q" type="search" data-p="ph" autocomplete="off" aria-label="Search"><span id="cnt"></span></div></div>
+
+<section id="hk"><div class="wrap rv"><h2 data-i="n1"></h2><p style="max-width:70ch" data-i="ab"></p>
+<div class="stats"><div><b data-n="2">0</b><span data-i="s1"></span></div><div><b data-n="5">0</b><span data-i="s2"></span></div><div><b data-n="2">0</b><span data-i="s3"></span></div><div><b data-n="8">0</b><span data-i="s4"></span></div></div></div></section>
+
+<section id="yt"><div class="wrap"><h2 class="rv" data-i="n2"></h2><div class="grid">
+<div class="card rv sr"><h3 data-i="k1"></h3><p data-i="k1d"></p><span class="tag">Python</span><span class="tag">Excel</span><span class="tag">Power BI</span></div>
+<div class="card rv sr"><h3 data-i="k2"></h3><p data-i="k2d"></p><span class="tag">Hadoop</span><span class="tag">Cloud</span></div>
+<div class="card rv sr"><h3 data-i="k3"></h3><p data-i="k3d"></p><span class="tag">SQL</span></div>
+<div class="card rv sr"><h3 data-i="k4"></h3><p data-i="k4d"></p><span class="tag">Jupyter</span><span class="tag">ML</span></div>
+<div class="card rv sr"><h3 data-i="k5"></h3><p data-i="k5d"></p><span class="tag">HTML/CSS</span><span class="tag">CMS</span></div>
+<div class="card rv sr"><h3 data-i="k6"></h3><p data-i="k6d"></p><span class="tag">Network Security</span><span class="tag">OHS</span><span class="tag">Git</span></div></div></div></section>
+
+<section id="pr"><div class="wrap"><h2 class="rv" data-i="n3"></h2><div class="grid">
+<div class="card rv sr"><h3 data-i="p1"></h3><p data-i="p1d"></p><span class="tag">Python</span><span class="tag">Jupyter</span></div>
+<div class="card rv sr"><h3 data-i="p2"></h3><p data-i="p2d"></p><span class="tag">Python</span><span class="tag">TÜİK</span></div></div>
+<p class="rv"><a href="https://github.com/aysedudutursun" target="_blank" rel="noopener">GitHub</a></p></div></section>
+
+<section id="dn"><div class="wrap"><h2 class="rv" data-i="n4"></h2><div class="tl">
+<div class="rv sr"><small>03.2026 –</small><h3 data-i="e1"></h3><p data-i="e1d"></p></div>
+<div class="rv sr"><small>2025 – 2026</small><h3 data-i="e2"></h3><p data-i="e2d"></p></div>
+<div class="rv sr"><small>2025 –</small><h3 data-i="e3"></h3></div>
+<div class="rv sr"><small>2021 – 2025</small><h3>Osmangazi Anadolu Lisesi</h3></div></div></div></section>
+
+<section id="tp"><div class="wrap"><h2 class="rv" data-i="n5"></h2><div class="grid">
+<div class="card rv sr"><h3>MCBÜ Veri Topluluğu</h3></div><div class="card rv sr"><h3>MCBÜ Teknofest</h3></div><div class="card rv sr"><h3>LÖSEV</h3></div><div class="card rv sr"><h3>Kızılay</h3></div><div class="card rv sr"><h3 data-i="c1"></h3></div><div class="card rv sr"><h3>Optimum Sosyal Medya</h3></div></div></div></section>
+
+<section id="ys"><div class="wrap"><h2 class="rv" data-i="n8"></h2><div class="grid">
+<div class="card rv sr"><span class="ic">🏃‍♀️</span><h3 data-i="l1"></h3><p data-i="l1d"></p></div>
+<div class="card rv sr"><span class="ic">🏋️‍♀️</span><h3>Fitness</h3><p data-i="l2d"></p></div>
+<div class="card rv sr"><span class="ic">🧘‍♀️</span><h3>Yoga</h3><p data-i="l3d"></p></div></div></div></section>
+
+<section id="rf"><div class="wrap"><h2 class="rv" data-i="n6"></h2><div class="grid">
+<div class="card rv sr"><div class="av">OT</div><h3>Dr. Orkun Teke</h3><p data-i="r1"></p><p data-i="org"></p><a class="lk" href="https://www.linkedin.com/in/orkun-teke" target="_blank" rel="noopener">LinkedIn</a></div>
+<div class="card rv sr"><div class="av">NE</div><h3>Nur Erdem</h3><p data-i="r2"></p><p data-i="org"></p><a class="lk" href="https://www.linkedin.com/in/nur-erdem" target="_blank" rel="noopener">LinkedIn</a></div>
+<div class="card rv sr"><div class="av">MO</div><h3>Mahmut Okuyucu</h3><p data-i="r3"></p><p data-i="org"></p></div>
+<div class="card rv sr"><div class="av">OÇ</div><h3>Osman Can Çetlenbik</h3><p data-i="r4"></p><p data-i="org"></p><a class="lk" href="https://linkedin.com/in/osmancancetlenbik" target="_blank" rel="noopener">LinkedIn</a><a class="lk" href="https://osmancancetlenbik.com/" target="_blank" rel="noopener" data-i="hcb2"></a></div></div>
+<p class="rv" style="color:var(--mut)" data-i="rn"></p></div></section>
+
+<section id="ic"><div class="wrap"><h2 class="rv" data-i="n7"></h2><div class="ct rv">
+<a href="mailto:aysedudutursun@gmail.com"><small data-i="em"></small>aysedudutursun@gmail.com</a>
+<a href="tel:+905415673602"><small data-i="tel"></small>0(541) 567 36 02</a>
+<a href="https://www.linkedin.com/in/aysedudutursun/" target="_blank" rel="noopener"><small>LinkedIn</small>/in/aysedudutursun</a>
+<a href="https://github.com/aysedudutursun" target="_blank" rel="noopener"><small>GitHub</small>aysedudutursun</a></div></div></section>
+</main>
+<footer>© 2026 Ayşe Dudu Tursun · Manisa</footer>
+
+<script>
+(function(){
+var D={
+n1:["Hakkımda","About","Sobre mí","Über mich"],n2:["Yetkinlikler","Skills","Competencias","Kompetenzen"],n3:["Projeler","Projects","Proyectos","Projekte"],n4:["Deneyim","Experience","Experiencia","Erfahrung"],n5:["Topluluk","Community","Comunidad","Engagement"],n6:["Referanslar","References","Referencias","Referenzen"],n7:["İletişim","Contact","Contacto","Kontakt"],n8:["Spor","Sport","Deporte","Sport"],
+r4:["Öğretim Görevlisi","Lecturer","Docente","Dozent"],
+r1:["Öğretim Görevlisi Dr.","Lecturer, PhD","Docente, Dr.","Dozent, Dr."],r2:["Öğretim Görevlisi","Lecturer","Docente","Dozentin"],r3:["Bilgisayar İşletmeni","Computer Operator","Operador informático","IT-Sachbearbeiter"],
+org:["Manisa Celal Bayar Üniversitesi","Manisa Celal Bayar University","Universidad Manisa Celal Bayar","Manisa Celal Bayar Universität"],
+rn:["İletişim bilgileri talep üzerine paylaşılır.","Contact details are available on request.","Los datos de contacto se facilitan bajo petición.","Kontaktdaten auf Anfrage."],
+sub:["Manisa Celal Bayar Üniversitesi Büyük Veri Analistliği 2. sınıf öğrencisi. Açık verilerle makine öğrenmesi projeleri geliştiriyor, pistte de hız kesmiyorum.","Second-year Big Data Analytics student at Manisa Celal Bayar University. I build machine learning projects with open data and I keep my pace on the track too.","Estudiante de 2.º de Análisis de Big Data en la Universidad Manisa Celal Bayar. Desarrollo proyectos de aprendizaje automático con datos abiertos y también corro en la pista.","Studentin im 2. Jahr Big-Data-Analyse an der Manisa Celal Bayar Universität. Ich entwickle ML-Projekte mit offenen Daten und laufe auch auf der Bahn."],
+b1:["Projelerim","My projects","Mis proyectos","Meine Projekte"],b2:["İletişim","Get in touch","Contactar","Kontakt aufnehmen"],
+ph:["Ara: Python, veri tabanı, yoga, Kızılay…","Search: Python, database, yoga, Red Crescent…","Buscar: Python, base de datos, yoga…","Suchen: Python, Datenbank, Yoga…"],
+res:["sonuç","results","resultados","Treffer"],
+ab:["Açık veri kaynaklarından (TÜİK, Kaggle, GitHub) elde ettiğim verilerle makine öğrenmesi ve yapay zekâ projeleri geliştiriyorum. Üniversitenin dijital platformlarında web düzenleme deneyimi kazandım. Veri odaklı departmanlarda staj arıyorum.","I develop machine learning and AI projects using open data (TÜİK, Kaggle, GitHub). I gained hands-on experience editing the university's digital platforms. I am looking for an internship in a data-driven department.","Desarrollo proyectos de aprendizaje automático e IA con datos abiertos (TÜİK, Kaggle, GitHub). He adquirido experiencia gestionando las plataformas digitales de la universidad. Busco unas prácticas en un departamento orientado a datos.","Ich entwickle ML- und KI-Projekte mit offenen Daten (TÜİK, Kaggle, GitHub) und habe Erfahrung in der Pflege der digitalen Plattformen der Universität. Ich suche ein Praktikum in einer datengetriebenen Abteilung."],
+s1:["sınıf","year of study","curso","Studienjahr"],s2:["sertifika","certificates","certificados","Zertifikate"],s3:["veri projesi","data projects","proyectos de datos","Datenprojekte"],s4:["topluluk","communities","comunidades","Gemeinschaften"],
+k1:["Veri analizi ve görselleştirme","Data analysis & visualization","Análisis y visualización de datos","Datenanalyse & Visualisierung"],k1d:["Uygulamalı veri analizi, veri görselleştirme ve sosyal ağ analizi.","Applied data analysis, visualization and social network analysis.","Análisis aplicado, visualización y análisis de redes sociales.","Angewandte Datenanalyse, Visualisierung und Netzwerkanalyse."],
+k2:["Büyük veri sistemleri","Big data systems","Sistemas de big data","Big-Data-Systeme"],k2d:["Büyük veri mimarileri, Hadoop, bulut bilişim ve Ar-Ge.","Big data architectures, Hadoop, cloud computing and R&D.","Arquitecturas big data, Hadoop, computación en la nube e I+D.","Big-Data-Architekturen, Hadoop, Cloud Computing und F&E."],
+k3:["Veri tabanı yönetimi","Database management","Gestión de bases de datos","Datenbankverwaltung"],k3d:["Veri tabanı tasarımı ve yönetimi; Turkcell sertifikalı.","Database design and administration; Turkcell certified.","Diseño y administración de bases de datos; certificada por Turkcell.","Datenbankdesign und -verwaltung; Turkcell-zertifiziert."],
+k4:["Makine öğrenmesi","Machine learning","Aprendizaje automático","Maschinelles Lernen"],k4d:["Regresyon modelleri kurma, karşılaştırma ve tahmin.","Building, comparing and forecasting with regression models.","Modelos de regresión: creación, comparación y predicción.","Regressionsmodelle erstellen, vergleichen und Prognosen erstellen."],
+k5:["Web ve arayüz","Web & UI","Web e interfaz","Web & UI"],k5d:["Kullanıcı arayüzü tasarımı; CMS ile üniversite sayfaları.","User interface design; university pages via CMS.","Diseño de interfaces; páginas universitarias con CMS.","UI-Design; Uni-Webseiten per CMS."],
+k6:["Güvenlik, hukuk, İSG","Security, law, OHS","Seguridad, derecho, PRL","Sicherheit, Recht, Arbeitsschutz"],k6d:["Siber güvenlik, bilişim hukuku ve iş sağlığı ve güvenliği.","Cybersecurity, IT law and occupational health and safety.","Ciberseguridad, derecho informático y prevención de riesgos laborales.","Cybersicherheit, IT-Recht sowie Arbeits- und Gesundheitsschutz."],
+p1:["Ev Fiyatı Tahmini","House Price Prediction","Predicción de precios de vivienda","Immobilienpreis-Prognose"],p1d:["Kaggle verisiyle birden fazla regresyon modelini karşılaştırıp en iyisini seçtim.","Compared several regression models on Kaggle data and picked the best one.","Comparé varios modelos de regresión con datos de Kaggle y elegí el mejor.","Mehrere Regressionsmodelle auf Kaggle-Daten verglichen und das beste gewählt."],
+p2:["Türkiye Turizm Analizi ve Gelir Tahmini","Turkey Tourism Analysis & Revenue Forecast","Análisis del turismo en Turquía y previsión de ingresos","Tourismusanalyse Türkei & Umsatzprognose"],p2d:["TÜİK'in 5 veri setiyle 2012–2026 gelirlerini görselleştirdim, ML ile tahmin ürettim.","Visualized 2012–2026 revenue from 5 TÜİK datasets and forecast with ML.","Visualicé los ingresos 2012–2026 con 5 conjuntos de TÜİK y proyecté con ML.","Umsätze 2012–2026 aus 5 TÜİK-Datensätzen visualisiert und mit ML prognostiziert."],
+e1:["Web Düzenleme (kısmi zamanlı), MCBÜ","Web Editor (part-time), MCBÜ","Editora web (media jornada), MCBÜ","Webredakteurin (Teilzeit), MCBÜ"],e1d:["Üniversite sayfalarını CMS ile ekip hâlinde güncelledim; içerik ve arayüz iyileştirdim.","Updated university pages with a team via CMS; improved content and layout.","Actualicé páginas universitarias en equipo con CMS; mejoré contenido e interfaz.","Uni-Seiten im Team per CMS gepflegt; Inhalt und Oberfläche verbessert."],
+e2:["Teknik Servis, MCBÜ","Technical Support, MCBÜ","Servicio técnico, MCBÜ","Technischer Service, MCBÜ"],e2d:["Bilgisayar bakımı ve kullanıcı desteği.","Computer maintenance and user support.","Mantenimiento informático y soporte al usuario.","Computerwartung und Nutzersupport."],
+e3:["Büyük Veri Analistliği, Manisa Celal Bayar Üniversitesi","Big Data Analytics, Manisa Celal Bayar University","Análisis de Big Data, Universidad Manisa Celal Bayar","Big-Data-Analyse, Manisa Celal Bayar Universität"],
+c1:["Sosyoloji ve Sanat Tarihi kulüpleri","Sociology & Art History clubs","Clubes de Sociología e Historia del Arte","Soziologie- & Kunstgeschichte-Clubs"],
+l1:["Atletizm","Athletics","Atletismo","Leichtathletik"],l1d:["Koşu benim reset tuşum.","Running is my reset button.","Correr es mi botón de reinicio.","Laufen ist mein Reset-Knopf."],l2d:["Disiplin ve dayanıklılık.","Discipline and endurance.","Disciplina y resistencia.","Disziplin und Ausdauer."],l3d:["Nefes, denge, odak.","Breath, balance, focus.","Respiración, equilibrio, enfoque.","Atem, Balance, Fokus."],
+em:["E-posta","Email","Correo","E-Mail"],tel:["Telefon","Phone","Teléfono","Telefon"],
+t1:["Büyük Veri Analistliği öğrencisi","Big Data Analytics student","Estudiante de Big Data","Big-Data-Studentin"],t2:["Veri analisti ve web düzenleyicisi","Data analyst & web editor","Analista de datos y editora web","Datenanalystin & Webredakteurin"],t3:["Atletizm, fitness ve yoga","Athletics, fitness and yoga","Atletismo, fitness y yoga","Leichtathletik, Fitness und Yoga"]};
+var L=0,codes=["tr","en","es","de"];
+try{var s=localStorage.getItem("lang");if(s!==null&&+s>=0&&+s<4)L=+s}catch(e){}
+function apply(){document.documentElement.lang=codes[L];
+document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=D[e.dataset.i][L]});
+document.querySelectorAll("[data-p]").forEach(function(e){e.placeholder=D[e.dataset.p][L]});
+document.querySelectorAll(".lg button").forEach(function(b){b.setAttribute("aria-pressed",+b.dataset.l===L)});
+w=0;c=0;del=false;search()}
+document.querySelectorAll(".lg button").forEach(function(b){b.onclick=function(){L=+b.dataset.l;try{localStorage.setItem("lang",L)}catch(e){}apply()}});
+var w=0,c=0,del=false,ty=document.getElementById("ty");
+function tick(){var t=D["t"+(w+1)][L];ty.textContent=t.slice(0,c);if(!del&&c<t.length){c++;setTimeout(tick,55)}else if(!del){del=true;setTimeout(tick,1400)}else if(c>0){c--;setTimeout(tick,28)}else{del=false;w=(w+1)%3;setTimeout(tick,300)}}
+var q=document.getElementById("q"),cnt=document.getElementById("cnt"),first=null;
+function search(){var v=q.value.trim().toLowerCase(),n=0;first=null;
+document.querySelectorAll(".sr").forEach(function(e){e.classList.remove("dim","hit");if(v){if(e.textContent.toLowerCase().indexOf(v)>-1){e.classList.add("hit");n++;if(!first)first=e}else e.classList.add("dim")}});
+cnt.textContent=v?n+" "+D.res[L]:""}
+q.addEventListener("input",search);
+q.addEventListener("keydown",function(e){if(e.key==="Enter"&&first)first.scrollIntoView({behavior:"smooth",block:"center"})});
+var bars=document.getElementById("bars");
+for(var i=0;i<18;i++){var b=document.createElement("i");b.style.setProperty("--h",(25+Math.random()*75)+"%");b.style.animationDelay=(-Math.random()*2.4)+"s";b.style.animationDuration=(1.6+Math.random()*1.6)+"s";bars.appendChild(b)}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");x.target.querySelectorAll("[data-n]").forEach(function(el){var n=+el.dataset.n,k=0,id=setInterval(function(){k++;el.textContent=k;if(k>=n)clearInterval(id)},240)});io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(e,i){e.style.transitionDelay=(i%3)*80+"ms";io.observe(e)});
+var cv=document.getElementById("cv"),x=cv.getContext("2d"),P=[],W,H,mo=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;P=[];var n=Math.min(70,Math.floor(W*H/22000));for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5})}
+function draw(){x.clearRect(0,0,W,H);var cs=getComputedStyle(document.documentElement),c1=cs.getPropertyValue("--c").trim(),c2=cs.getPropertyValue("--m").trim();
+for(var i=0;i<P.length;i++){var p=P[i];if(!mo){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+x.fillStyle=i%3?c1:c2;x.shadowColor=x.fillStyle;x.shadowBlur=10;x.beginPath();x.arc(p.x,p.y,2,0,7);x.fill();x.shadowBlur=0;
+for(var j=i+1;j<P.length;j++){var d=Math.hypot(p.x-P[j].x,p.y-P[j].y);if(d<130){x.strokeStyle=c1;x.globalAlpha=(1-d/130)*.35;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(P[j].x,P[j].y);x.stroke();x.globalAlpha=1}}}
+if(!mo)requestAnimationFrame(draw)}
+document.addEventListener("click",function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var t=document.getElementById(a.getAttribute("href").slice(1));if(t){e.preventDefault();t.scrollIntoView({behavior:mo?"auto":"smooth",block:"start"})}});
+addEventListener("resize",function(){rs();if(mo)draw()});rs();draw();apply();tick();
+})();
+</script>
+</body>
+</html>
