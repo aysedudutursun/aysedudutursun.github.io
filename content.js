@@ -1,17 +1,5 @@
-/* =====================================================================
-   İÇERİK DOSYASI  —  Sitedeki bütün yazılar ve bilgiler burada.
-   Yeni bir şey eklemek için: ilgili listede bir { ... } bloğunu kopyalayıp
-   yapıştırın ve içindeki yazıları değiştirin. Başka dosyaya dokunmanız gerekmez.
-
-   • Çok dilli yazı şu biçimdedir:  { tr:"...", en:"...", es:"...", de:"...", ar:"..." }
-   • Bir dili boş bırakırsanız İngilizce (yoksa Türkçe) gösterilir; site bozulmaz.
-   • Tek dilli (özel isim vb.) yazı için sadece "tırnak içinde metin" yazın.
-   • Virgülleri ve tırnakları silmemeye dikkat edin.
-   ===================================================================== */
-
-window.SITE = {
-
-  /* ---------- Diller (yeni dil eklemek için bir satır ekleyin) ---------- */
+export const SITE = {
+  /* ---------- Diller ---------- */
   languages: [
     { code: "tr", label: "TR", name: "Türkçe",   dir: "ltr" },
     { code: "en", label: "EN", name: "English",  dir: "ltr" },
@@ -23,13 +11,13 @@ window.SITE = {
 
   /* ---------- Genel bilgiler ---------- */
   brand: "ADT",
-  name: ["Ayşe Dudu", "Tursun"],          // iki satırda gösterilir
+  name: ["Ayşe Dudu", "Tursun"],
   location: "Manisa",
   year: 2026,
 
   photo: {
-    src: "assets/img/profil.jpg",          // fotoğrafı değiştirmek için bu dosyanın üzerine yazın
-    initials: "AD",                        // fotoğraf yüklenemezse görünür
+    src: "/assets/img/profil.jpg",
+    initials: "AD",
     alt: {
       tr: "Ayşe Dudu Tursun'un portresi",
       en: "Portrait of Ayşe Dudu Tursun",
@@ -39,21 +27,19 @@ window.SITE = {
     }
   },
 
-  /* ---------- Bölümlerin sırası (satırları yer değiştirerek sıralayın) ----------
-     Kullanılabilir: about, skills, projects, experience, community, sports, references, contact */
   sections: ["about", "skills", "projects", "experience", "community", "sports", "references", "contact"],
 
   /* ---------- Arayüz yazıları ---------- */
   ui: {
     nav: {
-      about:      { tr: "Hakkımda",    en: "About",       es: "Sobre mí",     de: "Über mich",   ar: "نبذة عني" },
-      skills:     { tr: "Yetkinlikler", en: "Skills",     es: "Competencias", de: "Kompetenzen", ar: "المهارات" },
-      projects:   { tr: "Projeler",    en: "Projects",    es: "Proyectos",    de: "Projekte",    ar: "المشاريع" },
-      experience: { tr: "Deneyim",     en: "Experience",  es: "Experiencia",  de: "Erfahrung",   ar: "الخبرة" },
-      community:  { tr: "Topluluk",    en: "Community",   es: "Comunidad",    de: "Engagement",  ar: "المجتمعات" },
-      sports:     { tr: "Spor",        en: "Sport",       es: "Deporte",      de: "Sport",       ar: "الرياضة" },
-      references: { tr: "Referanslar", en: "References",  es: "Referencias",  de: "Referenzen",  ar: "المراجع" },
-      contact:    { tr: "İletişim",    en: "Contact",     es: "Contacto",     de: "Kontakt",     ar: "التواصل" }
+      about:      { tr: "Hakkımda",     en: "About",        es: "Sobre mí",     de: "Über mich",   ar: "نبذة عني" },
+      skills:     { tr: "Yetkinlikler", en: "Skills",       es: "Competencias", de: "Kompetenzen", ar: "المهارات" },
+      projects:   { tr: "Projeler",     en: "Projects",     es: "Proyectos",    de: "Projekte",    ar: "المشاريع" },
+      experience: { tr: "Deneyim",      en: "Experience",   es: "Experiencia",  de: "Erfahrung",   ar: "الخبرة" },
+      community:  { tr: "Topluluk",     en: "Community",    es: "Comunidad",    de: "Engagement",  ar: "المجتمعات" },
+      sports:     { tr: "Spor",         en: "Sport",        es: "Deporte",      de: "Sport",       ar: "الرياضة" },
+      references: { tr: "Referanslar",  en: "References",   es: "Referencias",  de: "Referenzen",  ar: "المراجع" },
+      contact:    { tr: "İletişim",     en: "Contact",      es: "Contacto",     de: "Kontakt",     ar: "التواصل" }
     },
     projectsBtn: { tr: "Projelerim", en: "My projects", es: "Mis proyectos", de: "Meine Projekte", ar: "مشاريعي" },
     contactBtn:  { tr: "İletişim", en: "Get in touch", es: "Contactar", de: "Kontakt aufnehmen", ar: "تواصل معي" },
@@ -77,13 +63,11 @@ window.SITE = {
 
   /* ---------- Ana sayfa (hero) ---------- */
   hero: {
-    // Yazı makinesi efektiyle sırayla yazılan unvanlar
     roles: [
       { tr: "Büyük Veri Analistliği öğrencisi", en: "Big Data Analytics student", es: "Estudiante de Big Data", de: "Big-Data-Studentin", ar: "طالبة تحليل البيانات الضخمة" },
       { tr: "Veri analisti ve web düzenleyicisi", en: "Data analyst & web editor", es: "Analista de datos y editora web", de: "Datenanalystin & Webredakteurin", ar: "محللة بيانات ومحررة ويب" },
       { tr: "Atletizm, fitness ve yoga", en: "Athletics, fitness and yoga", es: "Atletismo, fitness y yoga", de: "Leichtathletik, Fitness und Yoga", ar: "ألعاب القوى واللياقة واليوغا" }
     ],
-    // Ana sayfada, unvanın altında görünen yetkinlik etiketleri (tıklanınca Yetkinlikler bölümüne gider)
     chips: ["Python", "SQL", "Power BI", "Excel", "Machine Learning", "Hadoop"],
     subtitle: {
       tr: "Manisa Celal Bayar Üniversitesi Büyük Veri Analistliği 2. sınıf öğrencisi. Açık verilerle makine öğrenmesi projeleri geliştiriyor, pistte de hız kesmiyorum.",
@@ -103,7 +87,6 @@ window.SITE = {
       de: "Ich entwickle ML- und KI-Projekte mit offenen Daten (TÜİK, Kaggle, GitHub) und habe Erfahrung in der Pflege der digitalen Plattformen der Universität. Ich suche ein Praktikum in einer datengetriebenen Abteilung.",
       ar: "أطوّر مشاريع تعلّم آلي وذكاء اصطناعي باستخدام بيانات مفتوحة المصدر (TÜİK وKaggle وGitHub). اكتسبتُ خبرة عملية في تحرير المنصات الرقمية للجامعة. أبحث عن تدريب في قسم يعتمد على البيانات."
     },
-    /* Sayılar: value = sabit sayı, auto = otomatik sayım ("projects" veya "communities") */
     stats: [
       { value: 2,  label: { tr: "sınıf", en: "year of study", es: "curso", de: "Studienjahr", ar: "سنة دراسية" } },
       { value: 5,  label: { tr: "sertifika", en: "certificates", es: "certificados", de: "Zertifikate", ar: "شهادات" } },
@@ -152,8 +135,6 @@ window.SITE = {
       title: { tr: "Ev Fiyatı Tahmini", en: "House Price Prediction", es: "Predicción de precios de vivienda", de: "Immobilienpreis-Prognose", ar: "التنبؤ بأسعار المنازل" },
       text:  { tr: "Kaggle verisiyle birden fazla regresyon modelini karşılaştırıp en iyisini seçtim.", en: "Compared several regression models on Kaggle data and picked the best one.", es: "Comparé varios modelos de regresión con datos de Kaggle y elegí el mejor.", de: "Mehrere Regressionsmodelle auf Kaggle-Daten verglichen und das beste gewählt.", ar: "قارنتُ عدة نماذج انحدار على بيانات Kaggle واخترتُ أفضلها." },
       tags: ["Python", "Jupyter"]
-      // repo: "depo-adı",   ← bu projenin GitHub depo adını yazarsanız aşağıdaki otomatik listede tekrar çıkmaz
-      // link: "https://github.com/aysedudutursun/..."   ← proje bağlantısı eklemek isterseniz başındaki // işaretini kaldırın
     },
     {
       title: { tr: "Türkiye Turizm Analizi ve Gelir Tahmini", en: "Turkey Tourism Analysis & Revenue Forecast", es: "Análisis del turismo en Turquía y previsión de ingresos", de: "Tourismusanalyse Türkei & Umsatzprognose", ar: "تحليل السياحة في تركيا والتنبؤ بالإيرادات" },
@@ -162,23 +143,17 @@ window.SITE = {
     }
   ],
 
-  /* ---------- GitHub'dan otomatik proje çekme ----------
-     Açıksa, GitHub'daki herkese açık depolarınız "Projeler" bölümünde otomatik görünür.
-     • Yeni depo yüklediğinizde siteyi elle güncellemenize gerek kalmaz.
-     • Başlık/açıklama GitHub'daki depo açıklamasından gelir (çevrilmez). Depo açıklamasını
-       GitHub'da doldurursanız kartta görünür.
-     • Yukarıdaki elle yazdığınız projelerle aynı depo iki kez çıkmasın diye, elle yazdığınız
-       projeye  repo: "depo-adı"  satırını ekleyin. */
+  /* ---------- GitHub'dan otomatik proje çekme ---------- */
   githubProjects: {
     enabled: true,
     username: "aysedudutursun",
-    max: 12,                 // en fazla kaç depo gösterilsin
-    hideForks: true,         // başkasından kopyalanan (fork) depoları gizle
-    exclude: ["aysedudutursun.github.io"],   // gösterilmesini istemediğiniz depo adları (portfolyonun kendisi gizli)
+    max: 12,
+    hideForks: true,
+    exclude: ["aysedudutursun.github.io"],
     title: { tr: "GitHub'daki diğer projelerim", en: "More projects on GitHub", es: "Más proyectos en GitHub", de: "Weitere Projekte auf GitHub", ar: "مشاريع أخرى على GitHub" }
   },
 
-  /* ---------- Deneyim / Eğitim (en yeni en üstte) ---------- */
+  /* ---------- Deneyim / Eğitim ---------- */
   experience: [
     {
       date: "03.2026 –",
@@ -200,8 +175,7 @@ window.SITE = {
     }
   ],
 
-  /* ---------- Topluluklar ----------
-     count: 2  → bu kart "topluluk" sayacında 2 sayılır (varsayılan 1) */
+  /* ---------- Topluluklar ---------- */
   communities: [
     {
       title: "TÜME Topluluğu",

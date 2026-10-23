@@ -1,16 +1,19 @@
-# Ayşe Dudu Tursun — Portfolyo
+# Portfolyo — Ayşe Dudu Tursun
 
-## GitHub'a yükleme
-Bu klasörün **içindekileri** (index.html, assets, data, .nojekyll) `aysedudutursun.github.io` deposunun ana dizinine yükleyin
-(eski index.html'in üzerine yazılır). Birkaç dakika sonra site yayında olur.
+Next.js (App Router) ile hazırlanmış çok dilli (TR/EN/ES/DE/AR) kişisel portfolyo sitesi.
 
-## Düzenleme
-- **Yazılar, projeler, deneyim, topluluk, iletişim:** `data/content.js`
-  - Yeni kart eklemek için ilgili listede bir `{ ... }` bloğunu kopyalayıp yapıştırın.
-  - Her yazı `{ tr:"", en:"", es:"", de:"", ar:"" }` biçimindedir; boş bırakılan dil için İngilizce/Türkçe gösterilir.
-  - Bölüm sırası: `sections` satırı.
-- **Fotoğraf:** `assets/img/profil.jpg` dosyasını aynı adla değiştirin (dikey, yaklaşık 3:4 oran en iyisi).
-- **Görünüm:** `assets/css/style.css` (renkler en üstteki `:root` bölümünde).
-- **Yeni dil eklemek:** `languages` listesine satır ekleyin ve yazılara o dilin kodunu ekleyin. Sağdan sola diller için `dir:"rtl"`.
+## Çalıştırma
 
-Bilgisayarınızda test etmek için `index.html` dosyasına çift tıklamanız yeterli.
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build
+```
+
+## Yapı
+
+- `app/layout.js` — kök yerleşim, metadata, tema script'i
+- `app/page.js` — sayfa mantığı
+- `app/content.js` — tüm site içeriği (metinler, projeler, diller)
+- `app/globals.css` — stiller
+- `public/assets/img/profil.jpg` — profil fotoğrafı (bu klasöre kendin ekle)
